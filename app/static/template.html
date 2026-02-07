@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Joseph Gonzalez, portfolio, EE, portfolio design, portfolio website, personal portfolio" />
+        <meta name="description" content="Welcome to Joe's Portfolio. Recent Electrical Engineering grad" />
+        <link rel="stylesheet" href="/static/css/template.css">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container">
+        <header>
+            
+            <a class = "logo" href="/">Joseph Gonzalez</a>
+            <!-- Hamburger button -->
+            <button class="menu-toggle" aria-label="Toggle menu" hidden="true">&#9776;</button>
+            <div class="nav_menu">
+                <nav class="navbar-links">
+                <div class="tag-box">
+                    <div class="tag">
+                    <a href="/#about" data-section="about">ABOUT</a>
+                    </div>
+                </div>
+
+                <div class="tag-box">
+                    <div class="tag">
+                    <a href="/#projects" data-section="projects">PROJECTS</a>
+                    </div>
+                </div>
+
+                <div class="tag-box">
+                    <div class="tag">
+                    <a href="/#contact" data-section="contact">CONTACT</a>
+                    </div>
+                </div>
+            </nav>
+            </div>
+            
+        </header>
+
+    <!-- Content -->
+    {% block content %}{% endblock %}
+    <script src="/static/js/template.js"></script>
+</body>

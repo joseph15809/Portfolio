@@ -1,0 +1,350 @@
+h2 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.about_content {
+    display: flex;
+    gap: 20px;
+    padding: 5rem;
+}
+
+.about_me{
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+.profile {
+  flex: 1;
+  padding: 20px;  
+  min-width: 320px;
+}
+
+.skills{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.skill_box{
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+
+  padding: 1.25rem 1rem;
+  border-radius: 14px;
+
+  background: rgba(0,0,0,0.35);
+  border: 2px solid rgba(255,255,255,0.20);
+
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.skill_box:hover{
+  transform: scale(0.98);
+  border-color: rgba(255,255,255,0.45);
+}
+
+.skill_box img{
+  width: 72px;
+  height: auto;
+}
+
+.skill_name{
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.project_left{
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 0;
+    padding: 3rem;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.project_visual{
+  position: relative;
+  align-items: stretch; 
+  display: flex;
+  background: #e14141;
+  border-radius: 14px;
+  padding-right: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  transition: transform 220ms ease;
+}
+
+.project_visual:hover{
+    transform: scale(0.9);
+}
+
+.project_display{
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+ 
+.project_display img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+
+.project_disc{
+    position: relative;
+    z-index: 2;
+    margin-left: -100px;
+    padding-left: 2rem;
+    transform: none;
+}
+
+.project_disc{
+    transform: none;
+}
+
+.project_disc h3{
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.6rem, 2.7vw, 2.6rem);
+}
+
+.project_disc p{
+    margin: 0;
+    max-width: 42ch;
+    font-size: 1.05rem;
+    opacity: 0.95;
+}
+
+.project_links{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project_btn{
+  display: inline-block;
+  width: fit-content;
+
+  text-decoration: none;
+  color: white;
+
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  font-size: 1.05rem;
+
+  padding: 0.25rem 0.25rem 0.6rem;
+  border-bottom: 3px solid rgba(104, 70, 255, 0.95);
+
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.project_btn:hover{
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.project_left:nth-of-type(even) .project_links{
+  align-items: flex-end;
+}
+
+.project_left:nth-of-type(even){
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.project_left:nth-of-type(even) .project_visual{
+  order: 2;
+  padding-right: 0;
+  padding-left: 7rem;
+}
+
+
+.project_left:nth-of-type(even) .project_disc{
+  order: 1;
+  margin-left: 0;
+  margin-right: -100px;
+  padding-left: 0;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+.project_left:nth-of-type(even) .project_disc p{
+  margin-left: auto;
+}
+
+.contact_content{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.contact_form{
+  display: grid;
+  gap: 1.25rem;
+
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+
+  padding: 2rem;
+}
+
+.contact_form input,
+.contact_form textarea{
+  width: 100%;
+  border: none;
+  outline: none;
+
+  background: rgba(255,255,255,0.06);
+  color: white;
+
+  padding: 1rem 1.25rem;
+  font-size: 1.05rem;
+  border-radius: 0;
+
+  border-bottom: 2px solid rgba(255,255,255,0.08);
+}
+
+.contact_form textarea{
+  min-height: 200px;
+  resize: vertical;
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus{
+  border-bottom-color: rgba(255, 70, 70, 0.9);
+}
+
+.contact_success{
+  display: none;
+  margin-bottom: 1rem;
+
+  color: #4cff6a;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+#form_submit{
+  justify-self: end;
+  align-self: end;
+
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  font-size: 1.1rem;
+
+  padding: 0.75rem 0.25rem;
+  border-bottom: 3px solid rgba(255, 70, 70, 0.9);
+}
+
+#form_submit:hover{
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px){
+
+  .project_left{
+    grid-template-columns: 1fr !important;
+  }
+
+  .project_visual{
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .project_disc{
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .project_left:nth-of-type(even) .project_visual{
+    order: 0 !important;
+  }
+  .project_left:nth-of-type(even) .project_disc{
+    order: 0 !important;
+    text-align: left !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+    .about_me{
+    font-size: 1rem;
+    max-width: 55ch;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px){
+  .about_content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.25rem;
+  }
+  
+  .profile{ order: 1; }
+  .skills{ order: 2; }
+
+  .about_me{
+    max-width: 42ch;
+    margin: 0 auto;
+    line-height: 1.75;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .profile{
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 14px;
+    padding: 1.25rem;
+  }
+
+  .skills{
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .skill_box{
+    width: 100%;
+    max-width: 130px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 14px;
+    padding: 0.8rem 0.6rem;
+    text-align: center;
+  }
+
+  .skill_box img{
+    width: 40px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+
+  .skill_name{
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 420px){
+  .skills{
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}

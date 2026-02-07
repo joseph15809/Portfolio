@@ -1,0 +1,130 @@
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: rgb(17, 17, 17);
+  color: #e7e7e7;
+  min-height: 100vh;
+  line-height: 1.5;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  z-index: 10;
+  background-color: rgb(50, 50, 50);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+.nav_menu{
+  margin-left: auto;
+  display: block; 
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: auto;
+  justify-content: flex-end;
+}
+
+.navbar-links a.active{
+  color: #ff4d4d;
+  border-bottom: 2px solid #ff4d4d;
+}
+
+.menu-toggle{
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+nav a {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: #ff0000;
+}
+
+nav .tag-box {
+  flex: 1 1 auto;
+  min-width: 10rem;
+  max-width: 13rem;
+  position: relative; 
+  height: 2.5rem;
+  border-radius: 50px;
+  background-size: 200%;
+  animation: animationGradient 2.5s linear infinite;
+  transition:
+    transform 0.2s ease,
+    animation-play-state 0.2s;
+}
+
+nav .tag-box:hover {
+  transform: scale(0.95);
+  background: none;
+  animation-play-state: paused; 
+}
+
+nav .tag-box .tag {
+  position: absolute;
+  inset: 3px;
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+@media (max-width: 878px) {
+  header{
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle{
+    display: block;
+  }
+
+  .nav_menu{
+    margin-left: 0;
+    display: none;
+    width: 100%;
+  }
+
+  .nav_menu.open{
+    display: block;
+  }
+
+  .navbar-links{
+    width: 100%;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+  }
+}
