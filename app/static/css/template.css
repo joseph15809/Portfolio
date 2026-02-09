@@ -28,6 +28,23 @@ header {
   box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
 
+.logo{
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+
+  color: #e7e7e7;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+
+  transition: background 200ms ease;
+}
+
+.logo:hover{
+  background: rgba(255, 77, 77, 0.15);
+}
+
 .nav_menu{
   margin-left: auto;
   display: block; 
@@ -105,6 +122,11 @@ nav .tag-box .tag {
     flex-wrap: wrap;
   }
 
+  .logo{
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+  }
+  
   .menu-toggle{
     display: block;
   }
