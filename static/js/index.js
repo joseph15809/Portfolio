@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     solarpunk.style.cursor = "pointer";
 
     pinball.addEventListener('click', () =>{
-        window.location.href = "/pinball";
+        window.location.href = "pinball.html";
     });
 
     wardrobe.addEventListener('click', () =>{
@@ -27,9 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/contact", {
+    const res = await fetch("https://formspree.io/f/mreyogqk", {
         method: "POST",
         body: new FormData(form),
+        headers: { "Accept": "application/json" },
     });
 
     if (res.ok) {
