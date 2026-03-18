@@ -12,22 +12,24 @@ h2 {
 .about_me{
   line-height: 1.7;
   max-width: 65ch;
+  margin: 0 auto;
 }
 
 .profile {
   flex: 1;
   padding: 20px;
   min-width: 320px;
+  text-align: center;
 }
 
 .headshot {
   display: block;
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
   border: 3px solid rgba(255,255,255,0.20);
 }
 
@@ -36,6 +38,7 @@ h2 {
   gap: 1rem;
   margin-top: 1.25rem;
   align-items: center;
+  justify-content: center;
 }
 
 .social_links a img {
@@ -354,7 +357,14 @@ h2 {
     border: 1px solid rgba(255,255,255,0.10);
     border-radius: 14px;
     padding: 1.25rem;
+    text-align: center;
   }
+
+  .headshot{
+    width: 180px;
+    height: 180px;
+  }
+
 
   .skills{
     display: grid;
