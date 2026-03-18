@@ -16,8 +16,53 @@ h2 {
 
 .profile {
   flex: 1;
-  padding: 20px;  
+  padding: 20px;
   min-width: 320px;
+}
+
+.headshot {
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 1.25rem;
+  border: 3px solid rgba(255,255,255,0.20);
+}
+
+.social_links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  align-items: center;
+}
+
+.social_links a img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.social_links a:hover img {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.linkedin_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #0a66c2;
+  border-radius: 6px;
+}
+
+.linkedin_icon img {
+  width: 28px !important;
+  height: 28px !important;
 }
 
 .skills{
